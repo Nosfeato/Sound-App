@@ -1,0 +1,48 @@
+// Variables CSS
+$rounded-border: 0.3rem;
+$big-padding: 0.4rem;
+
+//mixins
+
+@mixin hover-pop() {
+  transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+}
+
+@mixin hover-pop-small() {
+  transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+}
+
+@mixin standardButton() {
+  font-weight: bold;
+  width: 10rem;
+  padding: 0.8rem;
+  border-radius: $rounded-border;
+  border-style: none;
+}
+
+@mixin standardHeader() {
+  padding: $big-padding;
+  border-radius: $rounded-border;
+  text-align: center;
+  margin: 0 auto;
+  background-color: orange;
+  width: 28rem;
+  margin-bottom: 1rem;
+}
+
+@mixin standardTitle() {
+  padding: $big-padding;
+  border-radius: $rounded-border;
+  text-align: center;
+  margin: 0 auto;
+  width: 14rem;
+  background-color: red;
+}
