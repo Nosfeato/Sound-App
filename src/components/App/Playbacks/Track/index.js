@@ -11,7 +11,7 @@ class Track extends React.Component {
     return (
       <li className="track">
         <h3 className="track__name">{name}</h3>
-        <audio controls>
+        <audio className="track__player" controls>
           <source src={path} type="audio/mpeg" />
         </audio>
       </li>

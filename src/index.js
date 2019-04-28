@@ -14,6 +14,8 @@ import App from 'src/components/App';
 
 import store from 'src/store';
 
+import 'src/styles/index.scss';
+
 /**
  * Render
  */

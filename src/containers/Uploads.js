@@ -9,8 +9,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  addToTracksList: (name, file) => {
-    dispatch(addToTracksList(name, file));
+  addToTracksList: (name, path) => {
+    dispatch(addToTracksList(name, path));
   },
 });
 

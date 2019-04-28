@@ -3,6 +3,7 @@ import React from 'react';
 
 import uuidv4 from 'uuid/v4';
 import Track from './Track';
+import OverallTracksManager from './OverallTracksManager';
 
 class Playbacks extends React.Component {
 
@@ -10,14 +11,12 @@ class Playbacks extends React.Component {
     super(props);
 
     this.state = {
-      tracksList: [],
+      tracksList: null,
     };
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    console.log(nextProps.tracks);
     if (nextProps.tracks !== prevState.tracksList) {
-      console.log('patate');
       return { tracksList: nextProps.tracks };
     }
     else { 
@@ -30,6 +29,7 @@ class Playbacks extends React.Component {
     console.log(tracksList);
     return (
       <ul id="playbacks">
+        {tracksList[1] != null ? <OverallTracksManager /> : null }
         {tracksList.map(track => (
           <Track key={`${track.name}_${uuidv4}`} track={track} />
         ))}
