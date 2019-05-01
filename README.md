@@ -1,5 +1,15 @@
 # Technical Project Presentation
-                                             
+                              
+## Index
+**Overall Strategy:** *line 7-22*
+**Technologies used:**  *23-42*
+**Project Layout:**  *43-60*
+**Potential issues:**  *61-71*
+**How to test ? :** *72- 84*
+**How to test the responsivness ? :** *84-91*
+**What still needs to be done :** *92-102*
+
+
 ## Overall strategy
 
 The task has been laid out in a document, but its important to think about who will benefit from this project.
@@ -59,6 +69,8 @@ Special attention should be placed on the synchronous actions in regards to our 
 
 To ensure a responsive web-app we will need to use "rem" and "em" measures. Pourcentages are allowed but should be used with caution. Any other measures are **NOT** to be used. This will allow for our app to be adaptable to any media query with 5 lines of codes per device width, therefor increasing development speed and code flexibility and efficiency (always a bonus for SEO purposes).
 
+In order to preserve the brand reputation we should make sure that the code works for blind people at the very least (a sound app for deaf people will take a lot more manpower to build).
+
 ## How to test ?
 
 1. Install yarn locally (or globaly if you think you will reuse yarn )
@@ -70,3 +82,23 @@ To ensure a responsive web-app we will need to use "rem" and "em" measures. Pour
 
 
 Have fun ! :D
+
+## How to test responsivness ?
+
+1. Once the website is opened (with "yarn start") press F12 or right click and click on "Inspect"
+2. You should see a window open on your browser with "Elements  Console Sources " etc... Just click on the little phone and screen icon to the left of "Elements" and your browser shoudl change slightly.
+3. If you look carefuly you should have a vertical bar you can move to the left of the web page or two possible inputs on top of the web page. 
+4. If the web page adapts at least a little to the screen, then it is a responsive web app. It doesn't have to be fluid and it doesn't have to work with evry size , but if a couple seem to work fine, then thats perfect. The sizes that arn't supported yet can be added later no worries (its actualy pretty quick to do once you know the screen measurements, you can check the file with the following path for the supported media sizes: 'src/styles/index.scss'). Each '@media query' represents different screen sizes.
+
+## What still needs to be done ?
+
+- Change file import system from file picker to file dropper (to make the app easier to use and more confortable for users)
+- Change file information transfering system from Redux-based to React import based OR add conditionnal transfer to provent any virus file/script injections in our Redux global states.
+- Add information to our different input ranges (like the volume cursor).
+- SCSS refactoring for faster future development.
+- Check for functions that could be added to the helpers folder to make sure the development can be as fast as possible.
+- Replace document.getElementById by React refs, to increase the app speed.
+- Improve the overall play/pause/reset system. A loop works fine but if we encounter someone who has 500+ audios to interact with at the same time it will be a real synchronization issue.
+- Improve SEO by adding a maximum of information to all the tags.
+- SEO Crawler testing.
+
