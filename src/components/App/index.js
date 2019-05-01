@@ -6,7 +6,6 @@ import React from 'react';
  * Local import
  */
 
-// Relative type imports to anticipate and facilitate project restructuring.
 import Uploads from 'src/containers/Uploads';
 import Playbacks from 'src/containers/Playbacks';
 
@@ -14,16 +13,18 @@ import Playbacks from 'src/containers/Playbacks';
 import './app.scss';
 
 
-/**
- * Code
- */
-
-// Class instead of function in order to anticipate further App modifications.
+// App jsx layout
 class App extends React.Component {
+
+  handleDrop = (event) => {
+    event.preventDefault();
+    const file = event.target.dataTransfer.items;
+    console.log(file);
+  }
 
   render() {
     return (
-      <div id="app">
+      <div id="app" onDrop={this.handleDrop}>
         <Uploads />
         <Playbacks />
       </div>

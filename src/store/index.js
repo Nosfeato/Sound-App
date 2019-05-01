@@ -15,7 +15,7 @@ import reducer from 'src/store/reducer';
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
   reducer,
-  compose,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 
 

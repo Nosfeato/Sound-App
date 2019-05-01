@@ -1,0 +1,12 @@
+#playbacks {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  height: 60rem;
+  border: 0.3rem solid rgb(165, 165, 165);
+}
+
+#playbacks__list {
+  overflow-y: auto;
+}
+

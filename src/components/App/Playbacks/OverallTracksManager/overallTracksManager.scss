@@ -1,13 +1,24 @@
+@import 'src/styles/_vars.scss';
+
 .grey {
   background-color: rgb(194, 194, 194);
 }
 
 .yellow {
-  background-color: rgb(166, 255, 0);
+  background-color: rgb(131, 202, 0);
 }
 
 .overall__button {
   margin: 1rem;
-  padding: 1rem;
+  padding: 0.6rem;
   border-radius: 1rem;
+  border-style: none;
+
+  &:hover {
+    background-color: rgb(139, 139, 0);
+  }
+}
+
+#generalTrackManager {
+  border-bottom: $standard-border;
 }

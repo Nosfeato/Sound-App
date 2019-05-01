@@ -1,17 +1,19 @@
 /**
- * NPM import
+ * NPM / Yarn imports
  */
 import React from 'react';
+
+
 /**
- * Local import
+ * Local imports
  */
 
 import './overallTracksManager.scss';
-/**
- * Code
- */
 
-// Class instead of function in order to anticipate further App modifications.
+
+/**
+ * Component
+ */
 class OverallTracksManager extends React.Component {
 
   state = {
@@ -20,10 +22,9 @@ class OverallTracksManager extends React.Component {
 
   playAllTracks = () => {
     const tracks = document.getElementsByClassName('track__player');
-    console.log(tracks);
-    console.log(tracks[0]);
 
     for (let x = 0; x < tracks.length; x += 1) {
+      console.log(tracks[x]);
       tracks[x].play();
     }
     this.setState({ playing: true });
@@ -39,14 +40,25 @@ class OverallTracksManager extends React.Component {
     this.setState({ playing: false });
   }
 
+  resetAllTracks = () => {
+    const tracks = document.getElementsByClassName('track__player');
+
+
+    for (let x = 0; x < tracks.length; x += 1) {
+      tracks[x].load();
+    }
+    this.setState({ playing: false });
+  }
+
 
   render() {
     const { playing } = this.state;
     return (
-      <>
+      <div id="generalTrackManager">
         <button type="button" className={`overall__button ${playing === true ? 'yellow' : 'grey'}`} onClick={this.playAllTracks}> PLAY </button>
         <button type="button" className={`overall__button ${playing === false ? 'yellow' : 'grey'}`} onClick={this.pauseAllTracks}> PAUSE </button>
-      </>
+        <button type="button" className="overall__button grey" onClick={this.resetAllTracks}> RESET </button>
+      </div>
     );
   }
 }

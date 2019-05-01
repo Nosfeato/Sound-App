@@ -1,10 +1,26 @@
 
-import React from 'react';
+/**
+ * NPM / Yarn imports
+ */
 
+import React from 'react';
 import uuidv4 from 'uuid/v4';
-import Track from './Track';
+
+/**
+ * Local imports
+ */
+
+// local components imports;
+import Track from 'src/containers/Track';
 import OverallTracksManager from './OverallTracksManager';
 
+// Local css imports
+import './playbacks.scss';
+
+
+/**
+ * Component
+ */
 class Playbacks extends React.Component {
 
   constructor(props) {
@@ -19,6 +35,7 @@ class Playbacks extends React.Component {
     if (nextProps.tracks !== prevState.tracksList) {
       return { tracksList: nextProps.tracks };
     }
+    // getDerivedStateFromProps needs a default return even if it is null therefor:
     else { 
       return null;
     }
@@ -28,14 +45,21 @@ class Playbacks extends React.Component {
     const { tracksList } = this.state;
     console.log(tracksList);
     return (
-      <ul id="playbacks">
+      <div id="playbacks">
         {tracksList[1] != null ? <OverallTracksManager /> : null }
-        {tracksList.map(track => (
-          <Track key={`${track.name}_${uuidv4}`} track={track} />
-        ))}
-      </ul>
+        <ul id="playbacks__list">
+          {tracksList.map((track, index) => (
+            <Track key={`${track.name}_${uuidv4()}`} trackNumber={index} track={track} />
+          ))}
+        </ul>
+      </div>
     );
   }
 }
+
+
+/**
+ * Export
+ */
 
 export default Playbacks;

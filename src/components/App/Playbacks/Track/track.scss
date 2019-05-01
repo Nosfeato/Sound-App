@@ -1,11 +1,70 @@
+@import 'src/styles/_vars.scss';
+
 .track {
   display: flex;
-  height: 2rem;
-  width: 40rem;
-  border: 1px solid red;
+  height: 20rem;
+  width: 100%;
+  border: $standard-border;
   
 }
 
+
+.track__manager {
+  width: 45%;
+  border-right: $standard-border;
+}
+
 .track__name {
+  height: 20%;
+  border: 1px solid red;
+  padding: 1rem 0;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.track__configurations {
+  display: flex;
+  justify-content: space-around;
+  height: 80%;
+  border: 1px solid blue;
 
 }
+
+.track__buttons {
+  padding: 5rem 0;
+}
+
+.track__switch {
+  height: 2rem;
+}
+
+.track__volume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gold;
+  padding: 1rem 0;
+}
+
+
+.track__volume__identifier {
+  color: #fff;
+}
+
+.track__volume__input {
+  width: 10rem;
+  height: 10rem;
+  transform: rotate(270deg);
+  margin-top: 1rem;
+}
+
+.track__display {
+  padding: 9rem 6rem;
+  color: white;
+}
+
+.track__player {
+  width: 20rem;
+}
+
