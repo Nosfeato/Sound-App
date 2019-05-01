@@ -20,6 +20,7 @@ class Track extends React.Component {
     this.audioRef = React.createRef();
     this.state = {
       play: false,
+      timer: 0,
     };
   }
 
@@ -80,7 +81,7 @@ class Track extends React.Component {
 
 
   render() {
-    const { trackNumber, track } = this.props;
+    const { track } = this.props;
     const { name, path } = track;
     //
     return (
@@ -105,7 +106,7 @@ class Track extends React.Component {
             <source src={path} type="audio/mpeg" />
             <track src={name} kind="captions" />
           </audio>
-          <input type="range" min="0" max="100" name="Audio timer" id={`track__${trackNumber}__duration`} />
+          <input type="range" min="0" max="100" defaultValue="0" name="Audio timer" id={`track__${this.trackNumber}__duration`} />
           <span id={`track__${this.trackNumber}__timer`} />
         </div>
       </li>

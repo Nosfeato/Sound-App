@@ -45,7 +45,8 @@ class OverallTracksManager extends React.Component {
 
 
     for (let x = 0; x < tracks.length; x += 1) {
-      tracks[x].load();
+      tracks[x].currentTime = 0;
+      this.pauseAllTracks();
     }
     this.setState({ playing: false });
   }
