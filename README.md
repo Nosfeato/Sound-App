@@ -61,7 +61,7 @@ To ensure a responsive web-app we will need to use "rem" and "em" measures. Pour
 
 ## How to test ?
 
-1. Install yarn localy (or globaly if you think you will reuse yarn )
+1. Install yarn locally (or globaly if you think you will reuse yarn )
 2. Clone the repository (open command prompt and type "git clone https://github.com/Nosfeato/Sound-App.git" then press enter)
 3. In the command prompt, once the cloning is finished, please write "cd Sound-App" then press enter(this should put you inside the necessary folder for the upcoming commands).
 4. In the command prompt write "yarn" and press enter (this will load the app with all the dependencies , allowing it to work)
