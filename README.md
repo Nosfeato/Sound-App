@@ -1,13 +1,13 @@
 # Technical Project Presentation
                               
 ## Index
-**Overall Strategy:** *line 7-22*
-**Technologies used:**  *23-42*
-**Project Layout:**  *43-60*
-**Potential issues:**  *61-71*
-**How to test ? :** *72- 84*
-**How to test the responsivness ? :** *84-91*
-**What still needs to be done :** *92-102*
+**Overall Strategy:** *line 7-22*  
+**Technologies used:**  *23-42*  
+**Project Layout:**  *43-60*  
+**Potential issues:**  *61-71*  
+**How to test ? :** *72- 84*  
+**How to test the responsivness ? :** *84-91*  
+**What still needs to be done :** *92-102*  
 
 
 ## Overall strategy
