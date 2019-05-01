@@ -10,6 +10,7 @@ class Uploads extends React.Component {
     const filePath = window.URL.createObjectURL(file);
     const { name } = file;
     addToTracksList(name, filePath);
+    event.target.value = null;
   }
 
 
