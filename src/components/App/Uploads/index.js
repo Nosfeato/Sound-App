@@ -1,9 +1,27 @@
+
+/**
+ * Yarn / NPM Imports
+ */
 import React from 'react';
+
+/**
+ * Local imports
+ */
+import './uploads.scss';
 
 
 class Uploads extends React.Component {
 
-
+  /** We use our props from our container.
+   *  You might find it weird since we arn't importing
+   *  anything, but thats the magic of the "Connect"
+   *  function in our containers. As our container
+   *  becomes the last link to our App, and not
+   *  our component anymore, its not the component
+   *  but the CONTAINER that needs the imports, and as
+   *  you have seen, we did import Uploads in our
+   *  container.
+   */
   addTrack = (event) => {
     const { addToTracksList } = this.props;
     const file = event.target.files[0];
@@ -17,7 +35,7 @@ class Uploads extends React.Component {
   render() {
     return (
       <>
-        <input type="file" onChange={this.addTrack} />
+        <input id="file-input" type="file" onChange={this.addTrack} />
       </>
     );
   }

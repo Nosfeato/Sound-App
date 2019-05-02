@@ -1,6 +1,17 @@
 /**
- * This constant is used in our reducer, to ensure all components needing a base value will render
+ * This "initialState" constant is used in our reducer, to ensure all components needing a base value will render
+ 
+ * You will notice the state property tracks_list has an undescore instead of a camelCase writting.
+ * Though this practice is questionable, I find it makes it easier to track what belongs to the store
+ * state and what belongs to the component state, as well as when a value changes from being globally
+ * accessible de locally accessible. tracks_list for exemple stays that way until it is added to the
+ * Playbacks.js where it is transformed into a local "tracks" variable. It also makes it much clearer
+ * if a developper knows how to properly use Redux or not, as a lot of new Redux users tend to
+ * copy and paste the same variables from reducer to container to component without understanding
+ * the flow of the variables, making them lose time in the testing process afterwords (since they
+ * arn't confortable in changing the code as they don't understand it).
  */
+
 const initialState = {
   tracks_list: [],
 };
@@ -11,7 +22,6 @@ const initialState = {
  * we don't have yet as we arn't making any API requests)
  */
 const ADD_TO_TRACKS_LIST = 'ADD_TO_TRACKS_LIST';
-const DELETE_TRACK_FROM_LIST = 'DELETE_TRACK_FROM_LIST';
 
 
 /**
@@ -27,13 +37,6 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         tracks_list: state.tracks_list.concat({ name: action.name, path: action.path }),
-      };
-
-    case DELETE_TRACK_FROM_LIST:
-      console.log(state.tracks_list[1]);
-      return {
-        ...state,
-        tracks_list: state.tracks_list.splice(action.index, 1),
       };
 
     default:
@@ -57,10 +60,7 @@ export const addToTracksList = (name, path) => ({
   path,
 });
 
-export const deleteTrackFromList = index => ({
-  type: DELETE_TRACK_FROM_LIST,
-  index,
-});
-
-
+/**
+ * Reducer export
+ */
 export default reducer;

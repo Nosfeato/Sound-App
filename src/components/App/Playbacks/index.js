@@ -11,7 +11,7 @@ import uuidv4 from 'uuid/v4';
  */
 
 // local components imports;
-import Track from 'src/containers/Track';
+import Track from './Track';
 import OverallTracksManager from './OverallTracksManager';
 
 // Local css imports
@@ -22,7 +22,6 @@ import './playbacks.scss';
  * Component
  */
 class Playbacks extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -41,13 +40,20 @@ class Playbacks extends React.Component {
     }
   }
 
+  /** 
+   * This is where we define what we render in our DOM on top of our base HTML (basicaly we enhance our web page
+   * window with the following components/tags).
+   */
   render() {
     const { tracksList } = this.state;
     console.log(tracksList);
     return (
       <div id="playbacks">
+        {/* Renders OverallTracksManager component if trackList has more then 1 element */}
         {tracksList[1] != null ? <OverallTracksManager /> : null }
         <ul id="playbacks__list">
+
+          {/* This function also renders the tracks in the list. */}
           {tracksList.map((track, index) => (
             <Track key={`${track.name}_${uuidv4()}`} trackNumber={index} track={track} />
           ))}

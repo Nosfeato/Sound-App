@@ -16,7 +16,6 @@
 
 .track__name {
   height: 20%;
-  border: 1px solid red;
   padding: 1rem 0;
   text-align: center;
   color: #fff;
@@ -27,7 +26,6 @@
   display: flex;
   justify-content: space-around;
   height: 80%;
-  border: 1px solid blue;
 
 }
 
@@ -35,16 +33,16 @@
   padding: 5rem 0;
 }
 
-.track__switch {
-  height: 2rem;
+.track__button {
+  @include standard-button;
 }
+
 
 .track__volume {
   display: flex;
   flex-direction: column;
   width: 8rem;
   align-items: center;
-  border: 1px solid gold;
   padding: 1rem 0;
 }
 

@@ -1,7 +1,26 @@
+/*
+* This file is used to make the css more maintainable. We store all the repeating styles here and use them
+* after importing this file in each scss files we want. We are using SCSS instead of LESS because LESS is
+* too powerful for what we need and not a lot of people know how to use it. SCSS is easier to use and
+* does exacly what we need for such a small app.
+*/
+
 // Variables
 
 $standard-border: 0.1rem solid rgb(95, 95, 95);
 
 // Mixins
+@mixin standard-button {
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border-style: none;
+  height: 3rem;
+  
+  &:hover {
+    background-color: rgb(139, 139, 0);
+  }
+};
+
 
 

@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html lang="fr">
+<!--We need "en" lang because the app is in english-->
+<html lang="en">
 <head>
+	<!-- This defines a "standard for translation" of what we add to our web-app. UTF-8 is the most well-known and used standard -->
 	<meta charset="UTF-8">
+
+	<!-- This allows our app to have the ability to be responsive (It doesn't make it responsive ! It just
+	allows it to be responsive in the future ). For more details: it makes our web-app ajust to the size of the screen, but our
+	elements inside our web-app don't adjust depending on the size of the screen yet, and thats why it isn't responsive yet.
+    "Web-app is adaptive, but not the things inside it (and we need them responsive not adaptive too)" in simple terms -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- This is a line of code we need to put because otherwise the page won't be rendered in an optimum way 
+		with Microsoft edge. A lot of people critisize the need for this, but in truth we could add Google chrome to the list
+		or mozilla. Only reason we don't is because Google chrome has been the web developper's base test support, so almost everything
+		works with Google Chrome (its really hard to find a css property that doesn't work with Chrome). As for mozilla,
+		it isn't a supported X-UA-Compatible property, because unlike microsoft, Netscape (the ones behind mozilla) didn't try to
+		develop its compatibility and instead focused on its speed. That is part of the reason why Mozzila Firefox lost what is called the
+	    "first browser war", despite it being recognized as the fastest browser at the time. -->
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- We import our main style -->
 	<link rel="stylesheet" href="src/styles/index.scss">
+
+	<!-- This gives a title to our web page, we could have added a logo to make it look more pretty-->
 	<title>Audionamix Interface</title>
 </head>
 <body>
+	<!---We need this in order to allow our React app to link to our HTML -->
 	<div id="root">
 
 	</div>

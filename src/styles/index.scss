@@ -1,6 +1,25 @@
+
+
+/*
+*   style reset and ScSS variable imports.
+*
+*   These imports allow two things:
+*   "reset" prevents default css behavior making our css easier to work with.
+*   "variables", as explained in the file, allows us to group up and improve
+*   the development speed of styles. The more variables we can add to
+*   _vars.scss the better (when necessary of course).
+*/
 @import 'reset';
 @import 'src/styles/vars';
 
+
+/*
+*  Here we change the basic font-size for each media size (default 0.2em).
+*  This allows us to size our components depending on our basic font-size.
+*  Making our app not only responsive but also VERY easily adaptable to any
+*  screen size. This is an extremely powerful way to increase productivity,
+*  while keeping the app flexible and the css stylesheets clean.
+*/
 html {
   font-size: 0.2em;
 }
