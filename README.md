@@ -5,8 +5,8 @@
 **Technologies used:**  *23-42*  
 **Project Layout:**  *43-60*  
 **Potential issues:**  *61-71*  
-**How to test ? :** *72- 84*  
-**How to test the responsiveness ? :** *84-91*  
+**How to test the app ? :** *72- 84*  
+**How to test the app responsiveness ? :** *84-91*  
 **What has been done ? :** *94-112*  
 **What still needs to be done ? :** *112-125*    
 
@@ -73,7 +73,7 @@ To ensure a responsive web-app we will need to use "rem" and "em" measures. Pour
 
 In order to preserve the brand reputation we should make sure that the code works for blind people at the very least (a sound app for deaf people will take a lot more manpower to build).
 
-## How to test ?
+## How to test the app ?
 
 1. Install yarn locally (or globaly if you think you will reuse yarn ). You can also use Npm if you are familiar with it, though the commands differ a little.
 2. Clone the repository (open command prompt and type "git clone https://github.com/Nosfeato/Sound-App.git" then press enter)
@@ -85,7 +85,7 @@ In order to preserve the brand reputation we should make sure that the code work
 
 Have fun ! If there are any issues just contact me on my cellphone (06 58 93 47 49) I'll fix any issue that may arise.
 
-## How to test responsiveness ?
+## How to test the app responsiveness ?
 
 1. Once the website is opened (with "yarn start") press F12 or right click and click on "Inspect"
 2. You should see a window open on your browser with "Elements  Console Sources " etc... Just click on the little phone and screen icon to the left of "Elements" and your browser shoudl change slightly.
