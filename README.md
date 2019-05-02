@@ -96,7 +96,7 @@ Have fun ! If there are any issues just contact me on my cellphone (06 58 93 47 
 - Change file import system from file picker to file dropzone (to make the app easier to use and more confortable for users)
 - Change file information transfering system from Redux-based to React import based OR add conditionnal transfer to provent any virus file/script injections in our Redux global states.
 - Add information to our different input ranges (like the volume cursor).
-- SCSS refactoring for faster future development.
+- continue SCSS refactoring for faster future development.
 - Check for functions that could be added to the helpers folder to make sure the development can be as fast as possible.
 - Improve the overall play/pause/reset system. A loop works fine but if we encounter someone who has 500+ audios to interact with at the same time it will be a real synchronization issue.
 - Improve SEO by adding a maximum of information to all the tags.
