@@ -1,12 +1,12 @@
-/** We need the "connect" function to enhance our component with the variables (proper term is Props)
- *  from our store.
+/** We need the "connect" function to enhance our component with the variables 
+ * (proper term is Props) from our store.
  */
 import { connect } from 'react-redux';
 
 // We import our component to be able to call it later.
 import Uploads from 'src/components/App/Uploads';
 
-/** We import all our actions from our reducer. 
+/** We import all our actions from our reducer.
  *  This line is optional as we don't always need actions in our components.
  *  In our particular case we need to be able to add file informations to
  *  our store's state, so we import "addToTracksList" which we created in

@@ -20,11 +20,13 @@ class OverallTracksManager extends React.Component {
     playing: false,
   }
 
+  /**
+   * Handlers
+   */
   playAllTracks = () => {
     const tracks = document.getElementsByClassName('track__player');
 
     for (let x = 0; x < tracks.length; x += 1) {
-      console.log(tracks[x]);
       tracks[x].play();
     }
     this.setState({ playing: true });
