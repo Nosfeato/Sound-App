@@ -42,7 +42,7 @@ class Track extends React.Component {
    */
 
   // Defines if the audio is playing or not.
-  handleClick = () => {
+  handlePlay = () => {
     this.audio.play();
   }
 
