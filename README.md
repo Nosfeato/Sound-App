@@ -102,7 +102,6 @@ Have fun ! If there are any issues just contact me on my cellphone (06 58 93 47 
 - Added individual volumes for each song
 - Added custom individual play button
 - Added custom individual pause button
-- Added adaptive switch to individual play/pause button
 - Added individual reset button
 - Added custom audio visualizer
 - Added custom audio timer
@@ -124,3 +123,4 @@ Have fun ! If there are any issues just contact me on my cellphone (06 58 93 47 
 - Add possibility to delete one and all tracks
 - Crunch functions into the "helpers" folder to clean up our component codes.
 - Make the audio visualizer cooler then its default appearance.
+- Fix button staying green when all tracks are not respecting the conditions.
