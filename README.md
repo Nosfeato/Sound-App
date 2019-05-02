@@ -6,7 +6,7 @@
 **Project Layout:**  *43-60*  
 **Potential issues:**  *61-71*  
 **How to test ? :** *72- 84*  
-**How to test the responsivness ? :** *84-91*  
+**How to test the responsiveness ? :** *84-91*  
 **What still needs to be done :** *92-102*  
 
 
@@ -38,7 +38,7 @@ We will therefor need the following dependencies:
 - Babel (to allow the reading of our app for testing, otherwise Webpack dev server can't work)
 - Eslint (all the eslints related to the use of React, based on the airbnb practices which are recognized world-wide as one of the best practices)
 - Autoprefixer (for faster development, it won't affect the app compiling)
-- Css, file, sass and Babel loader (for production and testing, Babel isn't made to translate all languages, it translates a specific set of languages and file formats. So we need a loader for the CSS, files and Sass which we will use for adaptable/reusable responsive code).
+- Css, file, sass and Babel loader (for production and testing, Babel isn't made to translate all languages, it translates a specific set of languages and file formats. So we need a loader for the CSS, files and Sass which we will use for adaptable/reusable responsive code testing).
 - React affiliated dependencies ( prop-types, classnames)
 - Redux ( necessary for a scalable app development in React )
 - uuidv4 (to provent React component key mapping issues)
@@ -46,7 +46,7 @@ We will therefor need the following dependencies:
 
 ## Project layout
 
-Each components should have an index.js and affiliated **NAMED** css file in order to increase import/development speed while keeping an easily reorganisable code (that way future reorganisation only requires to drag and drop and almost evrything will work without needing to recode imports). Indeed we will use relative and not absolute path for our imports to increase the flexibility of our app.
+Each components should have an index.js and affiliated **NAMED** css file in order to increase import/development speed while keeping an easily reorganisable code (that way future reorganisation only requires to drag and drop and almost everything will work without needing to recode imports). Indeed we will use relative and not absolute path for our imports to increase the flexibility of our app.
 
 Components should respect the following web and React standards and organisation:
 
@@ -59,7 +59,8 @@ Components should respect the following web and React standards and organisation
 - default exports
 
 All repeatable code should be stored in a "helpers" folder.
-This organisation will insure a clean code where evry Javascript file has its own particular use, allowing a perfect (or near perfect) organisation of the code, as well as optimise its readability. After all we are using React, might as well use it to the maximum of its capabilities.
+
+This organisation will insure a clean code where every Javascript file has its own particular use, allowing a perfect (or near perfect) organisation of the code, as well as optimise its readability. After all we are using React, might as well use it to the maximum of its capabilities.
 
 ## Projects potential issues/technicalities
 
@@ -73,32 +74,32 @@ In order to preserve the brand reputation we should make sure that the code work
 
 ## How to test ?
 
-1. Install yarn locally (or globaly if you think you will reuse yarn )
+1. Install yarn locally (or globaly if you think you will reuse yarn ). You can also use Npm if you are familiar with it, though the commands differ a little.
 2. Clone the repository (open command prompt and type "git clone https://github.com/Nosfeato/Sound-App.git" then press enter)
-3. In the command prompt, once the cloning is finished, please write "cd Sound-App" then press enter(this should put you inside the necessary folder for the upcoming commands).
-4. In the command prompt write "yarn" and press enter (this will load the app with all the dependencies , allowing it to work)
-5. Once that is done, write "yarn start" (this will start the development build , its the same thing as doing "npm run build:dev")
+3. In the command prompt, once the cloning is finished, please write "cd Sound-App" then press enter(this should put the command prompt path inside the necessary folder for the upcoming commands).
+4. In the command prompt write "yarn" and press enter (this will load the app with all the dependencies listed in package.json file , allowing it to work)
+5. Once that is done, write "yarn start" (this will start the development build , its the same thing as doing "npm run build:dev" ("npm run build:dev:win" if you are on windows)
 6. Wait a few seconds for the script to load then your browser should automaticaly open with the App !
 
 
-Have fun ! :D
+Have fun ! If there are any issues just contact me on my cellphone (06 58 93 47 49) I'll fix any issue that may arise.
 
-## How to test responsivness ?
+## How to test responsiveness ?
 
 1. Once the website is opened (with "yarn start") press F12 or right click and click on "Inspect"
 2. You should see a window open on your browser with "Elements  Console Sources " etc... Just click on the little phone and screen icon to the left of "Elements" and your browser shoudl change slightly.
 3. If you look carefuly you should have a vertical bar you can move to the left of the web page or two possible inputs on top of the web page. 
-4. If the web page adapts at least a little to the screen, then it is a responsive web app. It doesn't have to be fluid and it doesn't have to work with evry size , but if a couple seem to work fine, then thats perfect. The sizes that arn't supported yet can be added later no worries (its actualy pretty quick to do once you know the screen measurements, you can check the file with the following path for the supported media sizes: 'src/styles/index.scss'). Each '@media query' represents different screen sizes.
+4. If the web page adapts at least a little to the screen, then it is a responsive web app. It doesn't have to be fluid and it doesn't have to work with every size , but if a couple seem to work fine, then thats perfect. The sizes that arn't supported yet can be added later no worries (its actualy pretty quick to do once you know the screen measurements, you can check the file with the following path for the supported media sizes: 'src/styles/index.scss'). Each '@media query' represents different screen sizes.  The app currently works for any size between 425 pixels wide to 2560px (in other words a lot of phones, up to big computer screen sizes, after that or bellow that the app won't look optimal). I left the file input none responsive for two reasons: to allow you to see the difference between each component responsiveness ,and because it actualy makes it easier on smaller devices to add to the file while keeping the clarity of the app on bigger screens. We don't want people struggling with pressing "Choose a file".
 
 ## What still needs to be done ?
 
-- Change file import system from file picker to file dropper (to make the app easier to use and more confortable for users)
+- Change file import system from file picker to file dropzone (to make the app easier to use and more confortable for users)
 - Change file information transfering system from Redux-based to React import based OR add conditionnal transfer to provent any virus file/script injections in our Redux global states.
 - Add information to our different input ranges (like the volume cursor).
 - SCSS refactoring for faster future development.
 - Check for functions that could be added to the helpers folder to make sure the development can be as fast as possible.
-- Replace document.getElementById by React refs, to increase the app speed.
 - Improve the overall play/pause/reset system. A loop works fine but if we encounter someone who has 500+ audios to interact with at the same time it will be a real synchronization issue.
 - Improve SEO by adding a maximum of information to all the tags.
 - SEO Crawler testing.
-
+- Add possibility to delete one and all tracks
+- Crunch functions into the "helpers" folder to clean up our component codes.
