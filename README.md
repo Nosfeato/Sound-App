@@ -6,8 +6,9 @@
 **Project Layout:**  *43-60*  
 **Potential issues:**  *61-71*  
 **How to test ? :** *72- 84*  
-**How to test the responsiveness ? :** *84-91*  
-**What still needs to be done :** *92-102*  
+**How to test the responsiveness ? :** *84-91*
+**What has been done ? :** *94-112*
+**What still needs to be done ? :** *112-125*  
 
 
 ## Overall strategy
@@ -17,7 +18,7 @@ A client won't just need a play button and won't just need a audio file reader s
 
 In other words the necessary elements of this project are as follows:
 
-- *File drag & drop system (for fast and confortable file loading , as well as future management)*
+- *File drag & drop system (for fast and comfortable file loading , as well as future management)*
 - *Synchronous audio Play and Pause function*
 - *Responsive css (to respect the given task which aims to provide a universal app )*
 - *Visual layout of the audio track (for style and easy to use functional sound engeneering)*
@@ -91,11 +92,30 @@ Have fun ! If there are any issues just contact me on my cellphone (06 58 93 47 
 3. If you look carefuly you should have a vertical bar you can move to the left of the web page or two possible inputs on top of the web page. 
 4. If the web page adapts at least a little to the screen, then it is a responsive web app. It doesn't have to be fluid and it doesn't have to work with every size , but if a couple seem to work fine, then thats perfect. The sizes that arn't supported yet can be added later no worries (its actualy pretty quick to do once you know the screen measurements, you can check the file with the following path for the supported media sizes: 'src/styles/index.scss'). Each '@media query' represents different screen sizes.  The app currently works for any size between 425 pixels wide to 2560px (in other words a lot of phones, up to big computer screen sizes, after that or bellow that the app won't look optimal). I left the file input none responsive for two reasons: to allow you to see the difference between each component responsiveness ,and because it actualy makes it easier on smaller devices to add to the file while keeping the clarity of the app on bigger screens. We don't want people struggling with pressing "Choose a file".
 
+## What has been done ?
+
+- Possibility to import multiple files to the website
+- Added overflow scroller in case files exceed page limit
+- Added overall play button as instructed
+- Added overall pause button
+- Added overall reset button
+- Added individual volumes for each song
+- Added custom individual play button
+- Added custom individual pause button
+- Added adaptive switch to individual play/pause button
+- Added individual reset button
+- Added custom audio visualizer
+- Added custom audio timer
+- Added hover buttons coloring to make the app easier to use
+- Added volume data so blind people could still use the volume settings of each track
+- Used BEM standards on all tags
+
+
 ## What still needs to be done ?
 
-- Change file import system from file picker to file dropzone (to make the app easier to use and more confortable for users)
-- Change file information transfering system from Redux-based to React import based OR add conditionnal transfer to provent any virus file/script injections in our Redux global states.
-- Add information to our different input ranges (like the volume cursor).
+- Change file import system from file picker to file dropzone (to make the app easier to use and more comfortable for users)
+- Change file information transfering system from Redux-based to React import based OR add conditionnal transfer to prevent any virus script injections in our Redux global states.
+- Add information to our different input ranges (like the volume cursor) for visual comfort.
 - continue SCSS refactoring for faster future development.
 - Check for functions that could be added to the helpers folder to make sure the development can be as fast as possible.
 - Improve the overall play/pause/reset system. A loop works fine but if we encounter someone who has 500+ audios to interact with at the same time it will be a real synchronization issue.
@@ -103,3 +123,4 @@ Have fun ! If there are any issues just contact me on my cellphone (06 58 93 47 
 - SEO Crawler testing.
 - Add possibility to delete one and all tracks
 - Crunch functions into the "helpers" folder to clean up our component codes.
+- Make the audio visualizer cooler then its default appearance.
