@@ -52,7 +52,8 @@ const reducer = (state = initialState, action = {}) => {
  * to do and the containers, all the blocks will fit into place.
  * 
  * So here is a list of available actions for our reducer. The choice of
- * "which one will be used" will be determined in the component
+ * "which one will be used" will be determined in the component inside what
+ * are called "Handlers".
  */
 export const addToTracksList = (name, path) => ({
   type: ADD_TO_TRACKS_LIST,

@@ -25,7 +25,6 @@ class OverallTracksManager extends React.Component {
    */
   playAllTracks = () => {
     const tracks = document.getElementsByClassName('track__player');
-
     for (let x = 0; x < tracks.length; x += 1) {
       tracks[x].play();
     }
@@ -34,8 +33,6 @@ class OverallTracksManager extends React.Component {
 
   pauseAllTracks = () => {
     const tracks = document.getElementsByClassName('track__player');
-
-
     for (let x = 0; x < tracks.length; x += 1) {
       tracks[x].pause();
     }
@@ -44,8 +41,6 @@ class OverallTracksManager extends React.Component {
 
   resetAllTracks = () => {
     const tracks = document.getElementsByClassName('track__player');
-
-
     for (let x = 0; x < tracks.length; x += 1) {
       tracks[x].currentTime = 0;
       this.pauseAllTracks();

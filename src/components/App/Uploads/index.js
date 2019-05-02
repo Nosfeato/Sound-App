@@ -12,7 +12,8 @@ import './uploads.scss';
 
 class Uploads extends React.Component {
 
-  /** We use our props from our container.
+  /** We use our props from our container to access the
+   *  reducer "addToTracksList" action.
    *  You might find it weird since we arn't importing
    *  anything, but thats the magic of the "Connect"
    *  function in our containers. As our container
@@ -20,7 +21,11 @@ class Uploads extends React.Component {
    *  our component anymore, its not the component
    *  but the CONTAINER that needs the imports, and as
    *  you have seen, we did import Uploads in our
-   *  container.
+   *  container. So everything works !
+   */
+
+  /**
+   * Handler
    */
   addTrack = (event) => {
     const { addToTracksList } = this.props;

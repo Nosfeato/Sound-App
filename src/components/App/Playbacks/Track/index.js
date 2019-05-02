@@ -23,10 +23,6 @@ class Track extends React.Component {
     this.audioRef = React.createRef();
     this.sliderRef = React.createRef();
     this.timerRef = React.createRef();
-
-    this.state = {
-      play: false,
-    };
   }
 
   // We have to load the trackNumber before rendering otherwise all the jsx elements using trackNumber won't work
@@ -47,22 +43,17 @@ class Track extends React.Component {
 
   // Defines if the audio is playing or not.
   handleClick = () => {
-    console.log(this.audio.currentTime);
-    if (this.state.play === false) {
-      this.audio.play();
-      this.setState({ play: true });
-    }
-    else {
-      this.audio.pause();
-      this.setState({ play: false });
-    }
+    this.audio.play();
+  }
+
+  handlePause = () => {
+    this.audio.pause();
   }
 
   // Resets audio.
   handleReset = () => {
     this.audio.currentTime = 0;
     this.audio.pause();
-    this.setState({ play: false });
   }
 
   // Changes Volume based on input
@@ -99,13 +90,15 @@ class Track extends React.Component {
           <div className="track__configurations">
             <ul className="track__buttons">
               <li>
-                <button type="button" className="track__switch track__button" onClick={this.handleClick}> {this.state.play === false ? 'Play' : 'Pause'} </button>
+                <button type="button" className="track__switch track__button" onClick={this.handlePlay}> Play </button>
+                <button type="button" className="track__pause track__button" onClick={this.handlePause}> Pause </button>
                 <button type="button" className="track__reset track__button" onClick={this.handleReset}> Reset </button>
               </li>
             </ul>
             <div className="track__volume">
               <span className="track__volume__identifier">Volume :</span>
               <input type="range" min="0" max="100" name="volume" list="tickmarks" className="track__volume__input" onChange={this.handleTrackVolume} />
+              {/* Marks for blind people and to add more style to the volume slider. Also increases SEO ratin */}
               <datalist id="tickmarks">
                 <option value="0" label="0%" />
                 <option value="10" />
