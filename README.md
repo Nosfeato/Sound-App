@@ -6,9 +6,9 @@
 **Project Layout:**  *43-60*  
 **Potential issues:**  *61-71*  
 **How to test ? :** *72- 84*  
-**How to test the responsiveness ? :** *84-91*
-**What has been done ? :** *94-112*
-**What still needs to be done ? :** *112-125*  
+**How to test the responsiveness ? :** *84-91*  
+**What has been done ? :** *94-112*  
+**What still needs to be done ? :** *112-125*    
 
 
 ## Overall strategy
