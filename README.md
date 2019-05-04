@@ -125,3 +125,4 @@ Have fun ! If there are any issues just contact me on my cellphone (06 58 93 47 
 - Make the audio visualizer cooler then its default appearance.
 - Fix button staying green when all tracks are not respecting the conditions (need to define the conditions).
 - Improve css for a better looking app (especialy with all the custom elements, it would be a shame not to use that to make a cool web app)
+- Change the volume slider event (onChange isn't user friendly enough)
